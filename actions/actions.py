@@ -11,6 +11,9 @@ class PageActions:
     def __init__(self, driver) -> None:
         self.driver = driver
 
+    def get_element(self, selector: tuple):
+        return self.driver.find_element(*selector)
+
     def click(self, selector: tuple):
         """
         Perform a click action. Receive a tuple with the selector method
@@ -62,3 +65,13 @@ class PageActions:
     def press_tab_key(self):
         '''Press the tab key on the web page'''
         ActionChains(self.driver).key_down(Keys.TAB).perform()
+
+    def get_local_storage_item(self, item):
+        return self.driver.execute_script(f'return window.localStorage.getItem(arguments[0]);, {item}')
+
+    def get_local_storage_items(self):
+        return self.driver.execute_script(
+            "var ls = window.localStorage, items = {}; "
+            "for (var i = 0, k; i < ls.length; ++i) "
+            "  items[k = ls.key(i)] = ls.getItem(k); "
+            "return items; ")

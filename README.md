@@ -1,15 +1,34 @@
-# BugBank
+# Hackaton QA TripleTen Nov 2023
+
+## Equipo: QACTION
+
+## Integrantes
+
+* Susana Villegas
+* Ada Obregón
+* Jorge Sifuentes
+* Omar Centeno
+
+## Aplicaciones probadas
+
+* [Platzi Fake Store API](https://fakeapi.platzi.com/)
+* [BugBank de Jhonatas Matos](https://github.com/jhonatasmatos/bugbank-ui)
+* [Restful-Booker de Mark Winteringham](https://restful-booker.herokuapp.com/)
+
+
+
+## BugBank
 
 Proyecto de automatización de pruebas para la aplicación de Bug Bank, utilizando Python, Selenium y Pytest
 
-## Funcionalidades principales de la aplicación
+### Funcionalidades principales de la aplicación
 
 * Registro de un nuevo usuario
 * Login a la aplicación
 * Realizar una transferencia bancaria
 * Retiro de fondos
 
-## Enfoque de las pruebas
+### Enfoque de las pruebas
 
 Esta suite de pruebas busca verificar la funcionalidad de la aplicación BugBank,  utilizando el marco de trabajo de Page Object Model.
 
