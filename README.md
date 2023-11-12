@@ -9,14 +9,6 @@
 * Jorge Sifuentes
 * Omar Centeno
 
-## Aplicaciones probadas
-
-* [Platzi Fake Store API](https://fakeapi.platzi.com/)
-* [BugBank de Jhonatas Matos](https://github.com/jhonatasmatos/bugbank-ui)
-* [Restful-Booker de Mark Winteringham](https://restful-booker.herokuapp.com/)
-
-
-
 ## BugBank
 
 Proyecto de automatización de pruebas para la aplicación de Bug Bank, utilizando Python, Selenium y Pytest
@@ -30,7 +22,7 @@ Proyecto de automatización de pruebas para la aplicación de Bug Bank, utilizan
 
 ### Enfoque de las pruebas
 
-Esta suite de pruebas busca verificar la funcionalidad de la aplicación BugBank,  utilizando el marco de trabajo de Page Object Model.
+Esta suite de pruebas busca verificar la funcionalidad de la aplicación BugBank, utilizando el marco de trabajo de Page Object Model.
 
 Las herramientas para realizar el proyecto son Selenium y Pytest para realizar la automatización del navegador y pruebas respectivamente. El lenguaje de programación seleccionado fue Python.
 
@@ -58,29 +50,8 @@ Las herramientas para realizar el proyecto son Selenium y Pytest para realizar l
 4. Instalar dependencias: `pip3 install requirements`. También se puede instalar de forma manual: `pip3 install selenium pytest`
 5. Realizar la configuración de Chrome webdriver (ver más adelante)
 6. Definir la URL del servidor en el archivo `fixtures/secrets.py` variable: `BASE_URL`
-7. Correr pruebas: `python3 main.py --browser chrome`
+7. Correr pruebas: `python3 test_register.py` o correr las pruebas con el IDE.
 
-<!-- ### Configuración de Chrome webdriver
-
-Durante las pruebas se debe de agregar algunas características extras al driver. El código base de este proyecto incluía
-la siguiente configuración para obtener el código del teléfono:
-```py
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-chrome_options.add_experimental_option("perfLoggingPrefs", {'enableNetwork': True, 'enablePage': True})
-capabilities = DesiredCapabilities.CHROME
-capabilities["goog:loggingPrefs"] = {'performance': 'ALL'}
-```
-Sin embargo, al momento de incluirlo en la instancia del driver, generó un error. Debido a esto, se tiene que realizar la configuración de las `DesiredCapabilities` directamente en el código, agregando esta configuración en la clase `DesiredCapabilities` que se encuentra en el archivo desired_capabilities.py.
-
-La ruta completa para acceder al archivo es: selenium > webdriver > common > desired_capabilities.py.
-
-Dentro de la clase DesiredCapabilities, agregar la siguiente configuración para la constante CHROME:
-```py
-    CHROME = {
-        "browserName": "chrome",
-        "goog:loggingPrefs": {'performance': 'ALL'}
-    }
-``` -->
 
 ## Estructura del proyecto
 Dada la complejidad del proyecto y los diferentes elementos que se necesitan para llevar a cabo las pruebas, organicé el proyecto en las siguientes carpetas:
